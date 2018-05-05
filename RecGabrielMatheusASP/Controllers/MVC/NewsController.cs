@@ -60,6 +60,7 @@ namespace RecGabrielMatheusASP.Controllers.MVC
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create(News news)
         {
             if (ModelState.IsValid)
@@ -125,6 +126,7 @@ namespace RecGabrielMatheusASP.Controllers.MVC
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "NewsId,Title,CategoryId,PostDate,Photo,Capa,Text,ResumeText,Author")] News news)
         {
             if (ModelState.IsValid)
